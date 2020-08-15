@@ -1,0 +1,13 @@
+<h3>Comments:</h3>
+<div class="comments">
+  <div class="comment header">
+    <div>Name</div>
+    <div>Content</div>
+  </div>
+<%= for comment <- @comments do %>
+    <div class="comment">
+      <div><%= comment.name %></div>
+      <div><%= comment.content%></div>
+    </div>
+  <% end %>
+</div>
