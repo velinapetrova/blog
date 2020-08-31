@@ -1,21 +1,6 @@
-<h1>Show Post</h1>
-
-<ul>
-
-  <li>
-    <strong>Title:</strong>
+<div class="px-4 py-8">
+  <h1 class="font-bold text-2xl text-center pb-4">
     <%= @post.title %>
-  </li>
-
-  <li>
-    <strong>Body:</strong>
-    <%= @post.body %>
-  </li>
-
-</ul>
-
-<%= render "comments.html", comments: @post.comments %>
-<%= render "comments_form.html", post: @post, changeset: @changeset, action: Routes.post_post_path(@conn, :add_comment, @post) %>
-
-<span><%= link "Edit", to: Routes.post_path(@conn, :edit, @post) %></span>
-<span><%= link "Back", to: Routes.post_path(@conn, :index) %></span>
+  </h1>
+  <div><%= @post.body %></div>
+</div>

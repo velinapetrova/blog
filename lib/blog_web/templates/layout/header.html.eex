@@ -1,0 +1,19 @@
+<header class="sm:flex sm:items-center sm:justify-between p-4 bg-gray-400">
+  <a class="font-pacifico text-2xl" href="/">Velina Petrova</a>
+  <nav role="navigation">
+    <ul class="sm:flex">
+      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
+        <a class="hover:text-white" href="/about">About</a>
+      </li>
+      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
+        <a class="hover:text-white" href="/portfolio">My Work</a>
+      </li>
+      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
+        <a class="hover:text-white" href="/blog">Blog</a>
+      </li>
+      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
+        <a class="hover:text-white" href="/contact">Contact</a>
+      </li>
+    </ul>
+  </nav>
+</header>
