@@ -1,7 +1,25 @@
-<div class="bg-blue-200 px-4 py-8">
 <%= for post <- @posts do %>
-  <div class="bg-green-200 mb-8 p-4">
-    <h2 class="text-2xl text-center font-semibold"><%= link post.title, to: Routes.post_path(@conn, :show, post) %></h2>
-    <p class="text-lg"><%= post.body %></p>
+  <div>
+    <img class="hidden sm:block mx-auto" src="images/post_placeholder_image.jpg">
+    <div class="sm:flex sm:flex-row-reverse sm:items-baseline sm:py-8 mx-auto">
+      <div class="border-b-2 sm:border-b-0 border-gray-light pb-5">
+        <%= link post.title,
+          class: "text-3xl sm:text-5xl text-dark-gray hover:text-light-gray font-bold",
+          to: Routes.post_path(@conn, :show, post) %>
+        <p class="hidden sm:block sm:text-lg sm:py-8"><%= post.body %></p>
+        <%= link "Read More...",
+          class: "hidden sm:inline-block uppercase font-semibold text-sm text-dark-gray border-2 border-dark-gray px-4 py-2",
+          to: Routes.post_path(@conn, :show, post) %>
+      </div>
+      <div class="uppercase font-roboto-cond my-8 border-b-2 sm:border-b-0 border-gray-light sm:min-w-1/4 md:min-w-1/3">
+        <span class="text-sm text-white bg-dark-gray font-medium px-4 py-2">featured</span>
+        <a class="block text-light-gray text-sm my-4" href="#">POSTED ON DECEMBER 5, 2014</a>
+        <div class="text-sm my-1">by <a href="">Velina Petrova</div>
+        <div class="text-sm my-1">in <a href="">productivity</div>
+        <div class="hidden sm:block text-sm">3 comments</div>
+        <div class="hidden sm:block text-light-gray text-sm my-4">share this post</div>
+        <div class="hidden sm:block text-sm">twitter / facebook / google</div>
+      </div>
+    </div>
   </div>
 <% end %>
