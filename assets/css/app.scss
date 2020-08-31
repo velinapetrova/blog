@@ -1,4 +1,16 @@
 /* This file is for your main application css. */
 @import "tailwindcss/base";
 @import "tailwindcss/components";
+
+.nav-link {
+  @apply uppercase;
+  @apply font-roboto-cond;
+  @apply text-lg;
+  @apply text-dark-gray;
+}
+
+.nav-link:hover {
+  @apply text-light-gray;
+}
+
 @import "tailwindcss/utilities";

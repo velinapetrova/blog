@@ -1,0 +1,25 @@
+<header class="container mx-auto sm:flex sm:items-center sm:justify-between p-4">
+  <div class="flex items-center justify-between">
+    <a class="font-megrim text-4xl sm:text-5xl text-white bg-dark-gray px-2 sm:px-3 sm:py-0" href="/">VP</a>
+
+    <%= if !@display_mobile_menu do %>
+      <a class="sm:hidden" phx-click="toggle_mobile_menu">
+        <i class="fas fa-bars fa-2x"></i>
+      </a>
+    <% end %>
+
+    <%= if @display_mobile_menu do %>
+      <a class="sm:hidden" phx-click="toggle_mobile_menu">
+        <i class="fas fa-times fa-2x"></i>
+      </a>
+    <% end %>
+  </div>
+
+  <nav role="navigation">
+    <%= render BlogWeb.LayoutView, "_desktop_menu.html" %>
+
+    <%= if @display_mobile_menu do %>
+      <%= render BlogWeb.LayoutView, "_mobile_menu.html" %>
+    <% end %>
+  </nav>
+</header>
