@@ -1,18 +1,22 @@
-<header class="sm:flex sm:items-center sm:justify-between p-4 bg-gray-400">
-  <a class="font-pacifico text-2xl" href="/">Velina Petrova</a>
+<header class="container mx-auto sm:flex sm:items-center sm:justify-between p-4">
+  <div class="flex items-center justify-between">
+    <a class="font-megrim text-4xl sm:text-5xl text-white bg-dark-gray px-2 sm:px-3 sm:py-0" href="/">VP</a>
+    <a class="sm:hidden"><i class="fas fa-bars fa-2x"></i></a>
+    <a class="hidden"><i class="fas fa-times fa-2x"></i></a>
+  </div>
   <nav role="navigation">
     <ul class="sm:flex">
-      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
-        <a class="hover:text-white" href="/about">About</a>
+      <li class="py-2 sm:px-4 sm:py-1">
+        <a class="uppercase font-roboto-cond text-lg text-dark-gray hover:text-light-gray" href="/about">About</a>
       </li>
-      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
-        <a class="hover:text-white" href="/portfolio">My Work</a>
+      <li class="py-2 sm:px-4 sm:py-1">
+        <a class="uppercase font-roboto-cond text-lg text-dark-gray hover:text-light-gray" href="/portfolio">My Work</a>
       </li>
-      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
-        <a class="hover:text-white" href="/blog">Blog</a>
+      <li class="py-2 sm:px-4 sm:py-1">
+        <a class="uppercase font-roboto-cond text-lg text-dark-gray hover:text-light-gray" href="/blog">Blog</a>
       </li>
-      <li class="py-2 sm:px-2 sm:py-1 font-semibold font-serif text-lg">
-        <a class="hover:text-white" href="/contact">Contact</a>
+      <li class="py-2 sm:px-4 sm:py-1">
+        <a class="uppercase font-roboto-cond text-lg text-dark-gray hover:text-light-gray" href="/contact">Contact</a>
       </li>
     </ul>
   </nav>
