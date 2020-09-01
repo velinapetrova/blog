@@ -27,6 +27,12 @@ defmodule BlogWeb.Router do
     end
   end
 
+  scope "/admin", BlogWeb do
+    pipe_through :browser
+
+    get "/", AdminController, :index
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", BlogWeb do
   #   pipe_through :api
