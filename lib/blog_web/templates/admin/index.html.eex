@@ -1,1 +1,27 @@
-<h1>Admin Dashboard - Comming Soon...</h1>
+<header class="bg-blue-700">
+  <div class="container mx-auto flex flex-row justify-between items-center">
+    <nav class="py-4" role="navigation">
+      <ul class="flex flex-row">
+        <li class="px-4">
+          <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Categories</a>
+        </li>
+        <li class="px-4">
+          <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Posts</a>
+        </li>
+        <li class="px-4">
+          <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Roles</a>
+        </li>
+        <li class="px-4">
+          <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Users</a>
+        </li>
+        <li class="px-4">
+          <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Tags</a
+        ></li>
+      </ul>
+    </nav>
+    <%= link "Logout",
+      to: Routes.user_session_path(@conn, :delete),
+      method: :delete,
+      class: "font-serif text-lg text-blue-100 hover:text-white" %>
+  </div>
+</header>

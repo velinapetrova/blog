@@ -1,0 +1,18 @@
+<h1 class="px-8 pb-4 text-center font-semibold font-roboto-cond uppercase text-xl">Reset password</h1>
+
+<%= form_for @changeset, Routes.user_reset_password_path(@conn, :update, @token),
+  [class: "flex flex-col"], fn f -> %>
+
+  <%= label f, :password, "New password",
+    class: "uppercase font-roboto-cond text-lg text-dark-gray py-2" %>
+  <%= password_input f, :password, class: "border-2 border-gray-500 p-2", required: true %>
+  <%= error_tag f, :password %>
+
+  <%= label f, :password_confirmation, "Confirm new password",
+    class: "uppercase font-roboto-cond text-lg text-dark-gray py-2" %>
+  <%= password_input f, :password_confirmation, class: "border-2 border-gray-500 p-2", required: true %>
+  <%= error_tag f, :password_confirmation %>
+
+  <%= submit "Reset password",
+    class: "uppercase font-semibold font-roboto-cond text-sm bg-dark-gray hover:bg-white text-white hover:text-dark-gray border-2 border-dark-gray px-4 py-2 mt-6" %>
+<% end %>
