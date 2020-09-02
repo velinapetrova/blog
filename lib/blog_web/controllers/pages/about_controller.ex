@@ -1,4 +1,4 @@
-defmodule BlogWeb.AboutController do
+defmodule BlogWeb.Pages.AboutController do
   use BlogWeb, :controller
 
   def index(conn, _params) do

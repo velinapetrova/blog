@@ -16,15 +16,19 @@ defmodule BlogWeb.Router do
     plug :accepts, ["json"]
   end
 
+  scope "/", BlogWeb.Pages do
+    pipe_through :browser
+
+    get "/", HomeController, :index
+    get "/about", AboutController, :index
+    get "/portfolio", PortfolioController, :index
+    get "/contact", ContactController, :index
+  end
+
   scope "/", BlogWeb do
     pipe_through :browser
 
-    get "/", PageController, :index
-    get "/about", AboutController, :index
     get "/blog", PostController, :index
-    get "/portfolio", PortfolioController, :index
-    get "/contact", ContactController, :index
-
     delete "/log_out", UserSessionController, :delete
 
     resources "/posts", PostController do
@@ -47,6 +51,7 @@ defmodule BlogWeb.Router do
     pipe_through [:browser, :require_authenticated_user]
 
     get "/", AdminController, :index
+    get "/users", Admin.UserController, :index
   end
 
   if Mix.env() in [:dev, :test] do
