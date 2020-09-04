@@ -59,6 +59,9 @@ defmodule Blog.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
+  @doc "Get a list of all users"
+  def list(), do: Repo.all(User)
+
   ## User registration
 
   @doc """

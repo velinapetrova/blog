@@ -1,1 +1,30 @@
-Welcome to the users section
+<div class="w-full">
+  <div class="flex flex-row items-center justify-between bg-gray-100 h-20 p-8 shadow-lg">
+    <h2 class="font-roboto-cond font-medium text-3xl text-admin-blue">Users</h2>
+    <a href="#" class="font-roboto-cond text-white hover:text-admin-blue text-lg bg-admin-blue hover:bg-white rounded px-4 py-2">Send Invite</a>
+  </div>
+  <div class="bg-gray-200 h-screen px-8 py-10">
+    <table class="bg-white w-full">
+      <tr class="border-t-2 border-b-2 border-gray-200">
+        <th class="font-roboto-cond font-semibold text-lg text-dark-gray text-left p-4">ID</th>
+        <th class="font-roboto-cond font-semibold text-lg text-dark-gray text-left p-4">Name</th>
+        <th class="font-roboto-cond font-semibold text-lg text-dark-gray text-left p-4">Email</th>
+        <th class="font-roboto-cond font-semibold text-lg text-dark-gray text-left p-4">Role</th>
+        <th class="font-roboto-cond font-semibold text-lg text-dark-gray text-left p-4">Actions</th>
+      </tr>
+      <%= for user <- @users do %>
+        <tr class="border-b-2 border-gray-200 py-4">
+          <td class="p-4"><%= user.id %></td>
+          <td class="p-4">Velina Petrova</td>
+          <td class="p-4"><%= user.email %></td>
+          <td class="p-4">Admin</td>
+          <td class="p-4">
+            <a href=""><i class="fas fa-user-edit"></i></a>
+            <a href=""><i class="fas fa-trash"></i></a>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
+

@@ -1,0 +1,29 @@
+<div class="bg-white w-64 h-screen shadow-xl">
+  <ul class="flex flex-col p-8">
+    <li class="pb-2">
+      <a href="/admin" class="font-roboto-cond text-xl text-admin-gray hover:text-dark-gray">
+        <i class="fas fa-chart-line pr-2"></i>Dashboard
+      </a>
+    </li>
+    <li class="pb-2">
+      <a href="/admin/categories" class="font-roboto-cond text-xl text-admin-gray hover:text-dark-gray">
+        <i class="fas fa-layer-group pr-2"></i>Categories
+      </a>
+    </li>
+    <li class="pb-2">
+      <a href="/admin/posts" class="font-roboto-cond text-xl text-admin-gray hover:text-dark-gray">
+        <i class="fas fa-file pr-2"></i>Posts
+      </a>
+    </li>
+    <li class="pb-2">
+      <a href="/admin/users" class="font-roboto-cond text-xl text-admin-gray hover:text-dark-gray">
+        <i class="fas fa-users pr-2"></i>Users
+      </a>
+    </li>
+    <li class="pb-2">
+      <a href="/admin/tags" class="font-roboto-cond text-xl text-admin-gray hover:text-dark-gray">
+        <i class="fas fa-tags pr-2"></i>Tags
+      </a>
+    </li>
+  </ul>
+</div>

@@ -14,8 +14,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
     <%= csrf_meta_tag() %>
-    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
     <script src="https://kit.fontawesome.com/a68be49ec6.js" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
   <body>
     <%= live_render(@conn, BlogWeb.Layout.HeaderView) %>

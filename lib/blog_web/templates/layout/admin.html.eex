@@ -14,38 +14,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
 
     <%= csrf_meta_tag() %>
-    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
     <script src="https://kit.fontawesome.com/a68be49ec6.js" crossorigin="anonymous"></script>
+    <script defer type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
   </head>
-  <body class="bg-blue-100">
-    <header class="bg-blue-700">
-      <div class="container mx-auto flex flex-row justify-between items-center">
-        <nav class="py-4" role="navigation">
-          <ul class="flex flex-row">
-            <li class="px-4">
-              <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Categories</a>
-            </li>
-            <li class="px-4">
-              <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Posts</a>
-            </li>
-            <li class="px-4">
-              <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Roles</a>
-            </li>
-            <li class="px-4">
-              <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Users</a>
-            </li>
-            <li class="px-4">
-              <a class="font-serif text-lg text-blue-100 hover:text-white" href="#">Tags</a
-            ></li>
-          </ul>
-        </nav>
-        <%= link "Logout",
-          to: Routes.user_session_path(@conn, :delete),
-          method: :delete,
-          class: "font-serif text-lg text-blue-100 hover:text-white" %>
-      </div>
-    </header>
-    <main role="main">
+  <body>
+    <%= render BlogWeb.LayoutView, "admin_header.html", conn: @conn %>
+    <main role="main" class="flex flex-row">
+      <%= render BlogWeb.LayoutView, "admin_side_menu.html", conn: @conn %>
       <%= @inner_content %>
     </main>
   </body>

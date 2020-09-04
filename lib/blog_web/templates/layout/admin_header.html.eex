@@ -1,0 +1,7 @@
+<header class="flex flex-row items-center justify-between h-16 bg-admin-blue px-8">
+  <a class="font-megrim text-4xl text-white" href="/admin">Admin Panel</a>
+  <%= link "Logout",
+    to: Routes.user_session_path(@conn, :delete),
+    method: :delete,
+    class: "font-roboto-cond text-lg text-white hover:text-white" %>
+</header>
